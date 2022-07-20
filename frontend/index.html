@@ -10,6 +10,16 @@
      <h1>
         Bem vindo de volta {{ nome }}
      </h1>
+
+        <button @click="showName">
+            teste
+        </button>
+
+        <div v-for="user in users" @click="showName">
+            {{ user.name }}
+        </div>
+
+
     </div>
 
     <script>
@@ -17,9 +27,20 @@
            data(){
                return {
                    message: 'Hello Vue!',
-                   nome: 'Eduardo'
+                     nome: 'Eduardo',
+                   users: [
+                       {name: 'John'},
+                       {name: 'Jane'},
+                       {name: 'Bob'}
+                   ],
                }
-           }
+           },
+              methods: {
+                showName(){
+                    alert(this.nome);
+                }
+
+              }
        })
 
          app.mount('#app')
