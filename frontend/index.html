@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Utilizando vue3</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+     <h1>
+        Bem vindo de volta {{ nome }}
+     </h1>
+    </div>
+
+    <script>
+       var app = Vue.createApp({
+           data(){
+               return {
+                   message: 'Hello Vue!',
+                   nome: 'Eduardo'
+               }
+           }
+       })
+
+         app.mount('#app')
+    </script>
+</body>
+</html>
